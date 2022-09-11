@@ -1,0 +1,19 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+
+}
+
+nav>div:hover {
+    color: lightgreen;
+}
