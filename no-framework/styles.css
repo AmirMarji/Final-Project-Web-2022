@@ -48,12 +48,15 @@ nav>div>div {
 nav>div:hover>div {
     /* show them with hover  */
     display: flex;
+    
 
 }
 
 
 nav>div:hover {
     color: #FF1654;
+    position: relative;
+
 }
 
 .main {
