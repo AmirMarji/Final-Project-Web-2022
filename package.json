@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/AmirMarji/Final-Project-Web-2022#readme",
   "dependencies": {
-    "bulma": "^0.9.4",
     "express": "^4.18.2"
   },
   "devDependencies": {
