@@ -5,6 +5,7 @@ import AddWorkoutView from '../views/AddWorkoutView.vue'
 import EditWorkoutView from '../views/EditWorkoutView.vue'
 import StatsView from '../views/StatsView.vue'
 import AdminView from '../views/AdminView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 
 
 
@@ -62,6 +63,14 @@ const router = createRouter({
       name: 'admin',
       component: AdminView
     }
+    ,
+    {
+      //not sure why this aint working but whatever for now
+      path: '/*',
+      name: 'notfoundview',
+      component: NotFoundView
+    }
+    
   ]
 })
 
