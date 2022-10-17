@@ -2,6 +2,8 @@
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 let isActive = ref(false);
+
+
 </script>
 
 <template>
@@ -62,17 +64,17 @@ let isActive = ref(false);
         <div class="navbar-item">
           <div class="buttons">
             <!-- start of user login dropdown -->
-            <div class="dropdown">
+            <div  class="dropdown is-active">
   <div class="dropdown-trigger">
-    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+    <button  @click="isActive = !isActive" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
       <span>User Log in</span>
       <span class="icon is-small">
         <i class="fas fa-angle-down" aria-hidden="true"></i>
       </span>
     </button>
   </div>
-  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-    <div class="dropdown-content">
+  <div  class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
+    <div   class="dropdown-content">
       <a href="#" class="dropdown-item">
         Jimmy McGill
       </a>
