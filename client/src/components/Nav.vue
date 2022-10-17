@@ -64,47 +64,72 @@ let isActive = ref(false);
         <div class="navbar-item">
           <div class="buttons">
             <!-- start of user login dropdown -->
-            <div  class="dropdown is-active">
-  <div class="dropdown-trigger">
-    <button  @click="isActive = !isActive" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-      <span>User Log in</span>
-      <span class="icon is-small">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </button>
-  </div>
-  <div  class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
-    <div   class="dropdown-content">
-      <a href="#" class="dropdown-item">
-        Jimmy McGill
-      </a>
-      <a href="#" class="dropdown-item">
-        Kim Wexler
-      </a>
-      <a href="#" class="dropdown-item">
-        Mike Ehrmantraut
-      </a>
-      <a href="#" class="dropdown-item">
-        Howard Hamlin
-      </a>
-      <a href="#" class="dropdown-item">
-        Nacho Varga
-      </a>
-      <a href="#" class="dropdown-item">
-        Gus Fring
-      </a>
-      <a href="#" class="dropdown-item">
-        Chuck McGill
-      </a>
-      <a href="#" class="dropdown-item">
-        Lalo Salamanca
-      </a>
-    </div>
-  </div>
-</div>
+            <div class="dropdown is-active">
+              <div class="dropdown-trigger">
+                <button @click="isActive = !isActive" class="button" aria-haspopup="true"
+                  aria-controls="dropdown-menu3">
+                  <span>User Log in</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">
+                    <figure class="image is-48x48">
+                      <img src="../assets/BCS_S6_Portrait_Jimmy.webp">
+                      Jimmy McGill
+                    </figure>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <figure class="image is-48x48">
+                      <img src="../assets/BCS_S6_Portrait_Kim.webp">
+                      Kim Wexler
+                    </figure>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <figure class="image is-48x48">
+                      <img src="../assets/BCS_S6_Portrait_Mike.webp">
+                      Mike Ehrmantraut
+                    </figure>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <figure class="image is-48x48">
+                      <img src="../assets/BCS_S6_Portrait_Howard.webp">
+                      Howard Hamlin
+                    </figure>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <figure class="image is-48x48">
+                      <img src="../assets/BCS_S3_Nacho.webp">
+                      Nacho Varga
+                    </figure>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <figure class="image is-48x48">
+                      <img src="../assets/BCS_S3_GusFringe.webp">
+                      Gus Fring
+                    </figure>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <figure class="image is-48x48">
+                      <img src="../assets/BCS_S3_ChuckMcGill.webp">
+                      Chuck McGill
+                    </figure>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <figure class="image is-48x48">
+                      <img src="../assets/BCS_S6_Portrait_Lalo.webp">
+                      Lalo Salamanca
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
             <router-link to="/admin" class="button is-dark">
-          Admin
-        </router-link>
+              Admin
+            </router-link>
           </div>
         </div>
       </div>
