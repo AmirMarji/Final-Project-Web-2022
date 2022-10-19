@@ -6,7 +6,7 @@ import EditWorkoutView from '../views/EditWorkoutView.vue'
 import StatsView from '../views/StatsView.vue'
 import AdminView from '../views/AdminView.vue'
 import NotFoundView from '../views/NotFoundView.vue'
-
+import IndexView from '../views/IndexView.vue'
 
 
 const router = createRouter({
@@ -14,6 +14,12 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'index',
+      component: IndexView
+    },
+
+    {
+      path: '/home',
       name: 'home',
       component: HomeView
     },

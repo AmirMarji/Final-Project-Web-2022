@@ -12,7 +12,7 @@ export class User {
 
 
 const session = reactive( {
-    user: null as User | null,
+    user: null as User | null
 });
 
 /**

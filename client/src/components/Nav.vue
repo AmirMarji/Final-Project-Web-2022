@@ -31,7 +31,7 @@ let isOpen = ref(false);
 
     <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': isOpen }">
       <div class="navbar-start">
-        <router-link to="/" class="navbar-item">
+        <router-link to="/home" class="navbar-item">
           Home
         </router-link>
 
@@ -74,7 +74,7 @@ let isOpen = ref(false);
             <!-- start of user login dropdown -->
             <div class="dropdown is-active">
               <div class="dropdown-trigger">
-                <button v-if="session.user == null" @click="isActive = !isActive" class="button" aria-haspopup="true"
+                <button v-if="session.user == null || session.user.firstName == 'Guest'" @click="isActive = !isActive" class="button" aria-haspopup="true"
                   aria-controls="dropdown-menu3">
                   <span>User Log in</span>
                   <span class="icon is-small">
@@ -82,7 +82,7 @@ let isOpen = ref(false);
                   </span>
                 </button>
               </div>
-              <div v-if="session.user == null" class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
+              <div v-if="session.user == null || session.user.firstName == 'Guest' " class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
                 <div class="dropdown-content">
                   <a href="#" class="dropdown-item" @click="login('Jimmy', 'McGill','src/assets/BCS_S6_Portrait_Jimmy.webp')">
                     <figure class="image is-48x48">

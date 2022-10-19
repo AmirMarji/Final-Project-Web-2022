@@ -1,13 +1,12 @@
-
 <script setup lang="ts">
-import session, { login, logout } from '../stores/session' 
 import WelcomeCard from '../components/WelcomeCard.vue';
 
 
-
 </script>
-
 <template>
+
+
+
   <article class="message is-info">
     <div class="message-header">
       <p>Landing Page</p>
@@ -15,10 +14,8 @@ import WelcomeCard from '../components/WelcomeCard.vue';
     <div class="message-body">
 
       <h1>Welcome</h1>
-      <p>this is the temporary landing page for my exersize application</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam error nihil inventore voluptatibus quam porro
-        sequi! Tempora repudiandae rem dignissimos eaque, cupiditate facere autem voluptatibus earum cumque, minima sed
-        odit.</p>
+      <p>Welcome to the temperary home page. here you can see the current user and a tailered welcome message (Blank because you have to click sign in)</p>
+
     </div>
   </article>
 
@@ -28,7 +25,8 @@ import WelcomeCard from '../components/WelcomeCard.vue';
     <div class="column">Auto</div>
   <div class="column">Auto</div> -->
 <!-- </div> -->
-  <WelcomeCard></WelcomeCard> 
+ <WelcomeCard></WelcomeCard> 
+ 
 
 
 
