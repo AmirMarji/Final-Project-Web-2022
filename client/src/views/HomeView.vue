@@ -1,4 +1,10 @@
+
 <script setup lang="ts">
+import session, { login, logout } from '../stores/session' 
+import WelcomeCard from '../components/WelcomeCard.vue';
+
+
+
 </script>
 
 <template>
@@ -15,5 +21,17 @@
         odit.</p>
     </div>
   </article>
+
+  
+  <!-- <div class="columns">
+    <div class="column is-half"> <WelcomeCard></WelcomeCard></div>
+    <div class="column">Auto</div>
+  <div class="column">Auto</div> -->
+<!-- </div> -->
+  <WelcomeCard></WelcomeCard> 
+
+
+
+
 
 </template>

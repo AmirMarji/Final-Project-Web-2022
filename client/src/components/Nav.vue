@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
-import session, { login, logout } from '../stores/session' // IM NOT SURE IF I CAN MAKE THIS BETTER BE SUR TO ASK
+import session, { login, logout } from '../stores/session' 
 import LoginBadge from './LoginBadge.vue';
 
 // for user sign in
