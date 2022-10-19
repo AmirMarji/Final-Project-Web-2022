@@ -6,7 +6,9 @@ import session, { login, logout } from '../stores/session'
 export default {
   data() {
     return {
-        Title: ''
+        Title: '',
+        addWorkout,
+        session
     }
   }
 }
