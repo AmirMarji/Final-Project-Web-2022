@@ -14,7 +14,7 @@ import WelcomeCard from '../components/WelcomeCard.vue';
     <div class="message-body">
 
       <h1>Welcome</h1>
-      <p>Welcome to the temperary home page. here you can see the current user and a tailered welcome message (Blank because you have to click sign in)</p>
+      <p>Welcome to the temperary home page. If you are a guest visitor, please sign in for accsess to more pages</p>
 
     </div>
   </article>
