@@ -35,7 +35,8 @@ export function login(firstName: string, lastName: string, image: string): void 
  * makes user property null and redirects to a view (temp back to home page)
  */
 export function logout() {
-    session.user = null;
+    // session.user = null;
+    login('Guest', 'User', 'src/assets/images.jpg');
     //TODO make a view AND route for being logged out
     // router.push({name:"has-been-logged-out-view"})
 }
