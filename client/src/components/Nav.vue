@@ -84,49 +84,49 @@ let isOpen = ref(false);
               </div>
               <div v-if="session.user == null" class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
                 <div class="dropdown-content">
-                  <a href="#" class="dropdown-item" @click="login('Jimmy', 'McGill','https://www.w3schools.com/images/w3schools_green.jpg')">
+                  <a href="#" class="dropdown-item" @click="login('Jimmy', 'McGill','src/assets/BCS_S6_Portrait_Jimmy.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Jimmy.webp">
                       Jimmy McGill
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item" @click="login('Kim', 'Wexler')">
+                  <a href="#" class="dropdown-item" @click="login('Kim', 'Wexler','src/assets/BCS_S6_Portrait_Kim.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Kim.webp">
                       Kim Wexler
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item" @click="login('Mike', 'Ehrmantraut')">
+                  <a href="#" class="dropdown-item" @click="login('Mike', 'Ehrmantraut','src/assets/BCS_S6_Portrait_Mike.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Mike.webp">
                       Mike Ehrmantraut
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item" @click="login('Howard', 'Hamlin')">
+                  <a href="#" class="dropdown-item" @click="login('Howard', 'Hamlin','src/assets/BCS_S6_Portrait_Howard.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Howard.webp">
                       Howard Hamlin
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item" @click="login('Nacho', 'Varga')">
+                  <a href="#" class="dropdown-item" @click="login('Nacho', 'Varga','src/assets/BCS_S3_Nacho.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S3_Nacho.webp">
                       Nacho Varga
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item" @click="login('Gus', 'Fring')">
+                  <a href="#" class="dropdown-item" @click="login('Gus', 'Fring','src/assets/BCS_S3_GusFringe.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S3_GusFringe.webp">
                       Gus Fring
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item" @click="login('Chuck', 'McGill')">
+                  <a href="#" class="dropdown-item" @click="login('Chuck', 'McGill','src/assets/BCS_S3_ChuckMcGill.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S3_ChuckMcGill.webp">
                       Chuck McGill
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item" @click="login('Lalo', 'Salamanca')">
+                  <a href="#" class="dropdown-item" @click="login('Lalo', 'Salamanca','src/assets/BCS_S6_Portrait_Lalo.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Lalo.webp">
                       Lalo Salamanca
@@ -149,5 +149,6 @@ let isOpen = ref(false);
 
 
 <style lang="scss" scoped>
+
 
 </style>

@@ -5,16 +5,21 @@
 </script>
 
 <template>
-    <div  v-if="session.user != null">
-        <img src="{{session.user.image}} " width="100px" height="120px">
-        Welcome {{session.user.firstName}} {{session.user.lastName}} {{session.user.image}} 
-        (<a @click="logout()">
-            Log out
-        </a>)
+    <div  v-if="session.user != null" class="avatar">
+        <img :src="session.user.image" width="64" height="64">
+        Welcome {{session.user.firstName}} {{session.user.lastName}} 
+        <button @click="logout()" class="button is-info">Log out</button>
+
     </div>
 
 </template>
 
 
 <style scoped>
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 </style>
