@@ -74,7 +74,7 @@ let isOpen = ref(false);
             <!-- start of user login dropdown -->
             <div class="dropdown is-active">
               <div class="dropdown-trigger">
-                <button @click="isActive = !isActive" class="button" aria-haspopup="true"
+                <button v-if="session.user == null" @click="isActive = !isActive" class="button" aria-haspopup="true"
                   aria-controls="dropdown-menu3">
                   <span>User Log in</span>
                   <span class="icon is-small">
@@ -82,7 +82,7 @@ let isOpen = ref(false);
                   </span>
                 </button>
               </div>
-              <div class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
+              <div v-if="session.user == null" class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
                 <div class="dropdown-content">
                   <a href="#" class="dropdown-item" @click="login('Jimmy', 'McGill')">
                     <figure class="image is-48x48">
