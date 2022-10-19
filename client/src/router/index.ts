@@ -66,7 +66,7 @@ const router = createRouter({
     ,
     {
       //not sure why this aint working but whatever for now
-      path: '/*',
+      path: '/404',
       name: 'notfoundview',
       component: NotFoundView
     }

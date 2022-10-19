@@ -1,7 +1,16 @@
 <template>
     <div>
-        <h1>404 not found</h1>
-        <h2>it seems you're in the wrong page</h2>
+        <article class="message is-danger">
+            <div class="message-header">
+                <p>Danger</p>
+                <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+
+                <p>Wopps something went wrong</p>
+            </div>
+        </article>
+
 
     </div>
 </template>

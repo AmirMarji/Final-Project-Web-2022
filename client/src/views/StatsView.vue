@@ -1,6 +1,14 @@
 <template>
     <div>
-        <h1>THIS IS A PAGE TO VIEW WORKOUT STATS</h1>
+        <article class="message is-info">
+            <div class="message-header">
+                <p>Stats</p>
+            </div>
+            <div class="message-body">
+
+                <h1>THIS IS A PAGE TO VIEW WORKOUT STATS</h1>
+            </div>
+        </article>
     </div>
 </template>
 

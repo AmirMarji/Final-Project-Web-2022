@@ -1,6 +1,14 @@
 <template>
     <div>
-        <H1>THIS IS A PAGE TO EDIT AN EXISTING WORKOUT</H1>
+        <article class="message is-info">
+            <div class="message-header">
+                <p>Edit Workout</p>
+            </div>
+            <div class="message-body">
+
+                <h1>THIS IS A PAGE TO EDIT WORKOUTS</h1>
+            </div>
+        </article>
     </div>
 </template>
 
