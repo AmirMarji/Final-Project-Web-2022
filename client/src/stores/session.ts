@@ -36,6 +36,7 @@ export function login(firstName: string, lastName: string, image: string): void 
  */
 export function logout() {
     // session.user = null;
+    // this is good for now
     login('Guest', 'User', 'src/assets/images.jpg');
     //TODO make a view AND route for being logged out
     // router.push({name:"has-been-logged-out-view"})
