@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+import session, { login, logout } from '../stores/session' // IM NOT SURE IF I CAN MAKE THIS BETTER BE SUR TO ASK
+import LoginBadge from './LoginBadge.vue';
+
 // for user sign in
 let isActive = ref(false);
 // for navbar
 let isOpen = ref(false);
 
-
+// closeDropdownMenu = function(){
+// isActive = !isActive
+// };
 </script>
 
 <template>
@@ -79,49 +84,49 @@ let isOpen = ref(false);
               </div>
               <div class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
                 <div class="dropdown-content">
-                  <a href="#" class="dropdown-item">
+                  <a href="#" class="dropdown-item" @click="login('Jimmy', 'McGill')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Jimmy.webp">
                       Jimmy McGill
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item">
+                  <a href="#" class="dropdown-item" @click="login('Kim', 'Wexler')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Kim.webp">
                       Kim Wexler
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item">
+                  <a href="#" class="dropdown-item" @click="login('Mike', 'Ehrmantraut'); closeDropdownMenu();">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Mike.webp">
                       Mike Ehrmantraut
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item">
+                  <a href="#" class="dropdown-item" @click="login('Howard', 'Hamlin')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Howard.webp">
                       Howard Hamlin
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item">
+                  <a href="#" class="dropdown-item" @click="login('Nacho', 'Varga')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S3_Nacho.webp">
                       Nacho Varga
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item">
+                  <a href="#" class="dropdown-item" @click="login('Gus', 'Fring')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S3_GusFringe.webp">
                       Gus Fring
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item">
+                  <a href="#" class="dropdown-item" @click="login('Chuck', 'McGill')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S3_ChuckMcGill.webp">
                       Chuck McGill
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item">
+                  <a href="#" class="dropdown-item" @click="login('Lalo', 'Salamanca')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Lalo.webp">
                       Lalo Salamanca
@@ -133,6 +138,7 @@ let isOpen = ref(false);
             <router-link to="/admin" class="button is-dark">
               Admin
             </router-link>
+            <LoginBadge></LoginBadge>
           </div>
         </div>
       </div>
@@ -140,9 +146,7 @@ let isOpen = ref(false);
   </nav>
 </template>
 
-<script setup>
 
-</script>
 
 <style lang="scss" scoped>
 
