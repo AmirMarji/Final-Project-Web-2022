@@ -7,6 +7,7 @@ import StatsView from '../views/StatsView.vue'
 import AdminView from '../views/AdminView.vue'
 import NotFoundView from '../views/NotFoundView.vue'
 import IndexView from '../views/IndexView.vue'
+import session from '@/stores/session'
 
 
 const router = createRouter({
@@ -21,7 +22,13 @@ const router = createRouter({
     {
       path: '/home',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      beforeEnter: (to, from) => {
+        
+        if(!session.user){
+          return '/';
+        }
+      }
     },
     {
       path: '/about',
@@ -43,36 +50,66 @@ const router = createRouter({
     {
       path: '/workout',
       name: 'workout',
-      component: WorkoutListView
+      component: WorkoutListView,
+      beforeEnter: (to, from) => {
+        
+        if(!session.user){
+          return '/';
+        }
+      }
     }
     ,
     {
       path: '/addworkout',
       name: 'addworkout',
-      component: AddWorkoutView
+      component: AddWorkoutView,
+      beforeEnter: (to, from) => {
+        
+        if(!session.user){
+          return '/';
+        }
+      }
     }
     ,
     {
       path: '/editworkout',
       name: 'editworkout',
-      component: EditWorkoutView
+      component: EditWorkoutView,
+      beforeEnter: (to, from) => {
+        
+        if(!session.user){
+          return '/';
+        }
+      }
     }
     ,
     {
       path: '/stats',
       name: 'stats',
-      component: StatsView
+      component: StatsView,
+      beforeEnter: (to, from) => {
+        
+        if(!session.user){
+          return '/';
+        }
+      }
     }
     ,
     {
       path: '/admin',
       name: 'admin',
-      component: AdminView
+      component: AdminView,
+      beforeEnter: (to, from) => {
+        
+        if(!session.user){
+          return '/';
+        }
+      }
     }
     ,
     {
       //not sure why this aint working but whatever for now
-      path: '/404',
+      path: '/:pathMatch(.*)*',
       name: 'notfoundview',
       component: NotFoundView
     }
