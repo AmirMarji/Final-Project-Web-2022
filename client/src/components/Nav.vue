@@ -84,7 +84,7 @@ let isOpen = ref(false);
               </div>
               <div v-if="session.user == null" class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
                 <div class="dropdown-content">
-                  <a href="#" class="dropdown-item" @click="login('Jimmy', 'McGill')">
+                  <a href="#" class="dropdown-item" @click="login('Jimmy', 'McGill','https://www.w3schools.com/images/w3schools_green.jpg')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Jimmy.webp">
                       Jimmy McGill
@@ -96,7 +96,7 @@ let isOpen = ref(false);
                       Kim Wexler
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item" @click="login('Mike', 'Ehrmantraut'); closeDropdownMenu();">
+                  <a href="#" class="dropdown-item" @click="login('Mike', 'Ehrmantraut')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Mike.webp">
                       Mike Ehrmantraut
