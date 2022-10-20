@@ -30,7 +30,7 @@
                             <div class="media">
                                 <div class="media-left">
                                     <figure class="image is-48x48">
-                                        <img src="src/assets/sportIcon.png" alt="">
+                                        <img src="../assets/sportIcon.webp" alt="">
                                     </figure>
                                 </div>
                                 <div class="media-content">

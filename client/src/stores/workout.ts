@@ -20,7 +20,7 @@ const workout = reactive( [
         { user:'Kim Wexler', title: '20 mile rum', date: 'jan 10 2020', duration: '40 mins', location: 'United States', picture: 'src/assets/muscular-build-athlete-having-cross-training-in-a-royalty-free-image-1618930811_.jpg', type: 'Bike' },
         {  user:'Chuck Mcgill',title: '30 mile rum', date: 'jan 10 2020', duration: '50 mins', location: 'United States', picture: 'src/assets/muscular-build-athlete-having-cross-training-in-a-royalty-free-image-1618930811_.jpg', type: 'walk' },
         { user:'Nacho Varga', title: '40 mile rum', date: 'jan 10 2020', duration: '60 mins', location: 'United States', picture: 'src/assets/muscular-build-athlete-having-cross-training-in-a-royalty-free-image-1618930811_.jpg', type: 'Cardio' },
-        { user:'Jimmy Mcgill', title: '50 mile rum', date: 'jan 10 2020', duration: '70 mins', location: 'United States', picture: 'https://www.w3schools.com/images/w3schools_green.jpg', type: 'Sregnth' }
+        { user:'Jimmy Mcgill', title: '50 mile rum', date: 'jan 10 2020', duration: '70 mins', location: 'United States', picture: 'src/assets/muscular-build-athlete-having-cross-training-in-a-royalty-free-image-1618930811_.jpg', type: 'Sregnth' }
 
     ] as workouData[]
 );
