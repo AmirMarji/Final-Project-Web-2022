@@ -100,9 +100,9 @@ const router = createRouter({
       name: 'admin',
       component: AdminView,
       beforeEnter: (to, from) => {
-        
-        if(!session.user){
-          return '/';
+        // limit admin page to jimmy mcgill user
+        if(session.user?.firstName !='Jimmy' && session.user?.lastName !='McGill'){
+          return '/home';
         }
       }
     }
