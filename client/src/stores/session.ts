@@ -28,6 +28,7 @@ export function login(firstName: string, lastName: string, image: string): void 
         image
        
     };
+    router.push('/home');
     
 }
 
@@ -36,6 +37,7 @@ export function login(firstName: string, lastName: string, image: string): void 
  */
 export function logout() {
     session.user = null;
+    router.push('/');
     // this is good for now
     // login('Guest', 'User', 'src/assets/images.jpg');
     //TODO make a view AND route for being logged out
