@@ -9,12 +9,11 @@ import WelcomeCard from '../components/WelcomeCard.vue';
 
   <article class="message is-info">
     <div class="message-header">
-      <p>Landing Page</p>
+      <p>Home</p>
     </div>
     <div class="message-body">
 
-      <h1>Welcome</h1>
-      <p>Welcome to the temperary home page. If you are a guest visitor, please sign in for accsess to more pages</p>
+      <h1>Welcome to the temperary home page.</h1>
 
     </div>
   </article>
