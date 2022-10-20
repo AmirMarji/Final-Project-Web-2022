@@ -14,8 +14,9 @@ let date = ref("")
 
 
 function SubmitForm() {
-
-   addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,title.value,picture.value,location.value,type.value,duration.value,date.value)
+    console.log(picture.value)
+    // user: string,title: string, date: string, duration: string, location: string, picture: string, type: string
+   addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,title.value,date.value,duration.value,location.value,picture.value,type.value)
 
   }
 

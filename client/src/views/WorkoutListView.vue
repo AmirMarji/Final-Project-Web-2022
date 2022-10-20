@@ -7,18 +7,51 @@
             <div class="message-body">
 
                 <h1>THIS IS A PAGE TO VIEW CURRENT WORKOUTS</h1>
+
+                <button class="button is-primary" @click="$router.push('/addworkout')
+                ">Add A New WORKOUT</button>
                 <div v-for="(workout, i) in workouts" :key="i">
-                    {{ workout.user }}
-                    {{ workout.title }}
-                    {{ workout.picture }}
-                    {{ workout.location }}
-                    {{ workout.type }}
-                    {{ workout.duration }}
-                    {{ workout.date }}
+
+
+
+
+                    <div class="card">
+                        <div class="card-image">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    {{ workout.title }}
+                                </p>
+                            </header>
+                            <figure class="image is-4by3">
+                                <img v-bind:src="workout.picture" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img src="https://bulma.io/images/placeholders/96x96.png"
+                                            alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">{{ workout.user }}</p>
+                                    <p class="subtitle is-6">@{{ workout.user }}</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                {{ workout.type }}
+                                {{ workout.duration }}
+                                {{ workout.location }}
+                                <br>
+                                <p>{{ workout.date }}</p>
+                            </div>
+                        </div>
+                    </div>
                     <button @click="deleteWorkout(i)">Delete</button>
                 </div>
-                <button @click="$router.push('/addworkout')
-                    ">Add</button>
+
             </div>
         </article>
     </div>
