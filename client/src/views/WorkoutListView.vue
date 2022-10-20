@@ -49,7 +49,11 @@
                             </div>
                         </div>
                     </div>
-                    <button @click="deleteWorkout(i)">Delete</button>
+                    <button class="button is-light" @click="deleteWorkout(i)">Delete</button>
+                    
+                    <!-- EDIT WILL COME LATER -->
+                <!-- <button class="button is-light" @click="$router.push('/editworkout')
+                ">Edit</button> -->
                 </div>
 
             </div>
