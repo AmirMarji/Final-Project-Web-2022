@@ -31,7 +31,7 @@ export function addWorkout(user: string,title: string, date: string, duration: s
     //     Title,date,duration,location,picture,type
 
     // };
-    workout.push({ user,title, date, duration, location, picture, type });
+    workout.unshift({ user,title, date, duration, location, picture, type });
     router.push('/workout')
 
 }
@@ -44,7 +44,7 @@ export function deleteWorkout(index: number) {
 export function editWorkout(index: number,user: string,title: string, date: string, duration: string, location: string, picture: string, type: string){
     //very rough draft just deletes and replaces new post simultainiusly
     workout.splice(index, 1);
-    workout.push({ user,title, date, duration, location, picture, type });
+    workout.unshift({ user,title, date, duration, location, picture, type });
     router.push('/workout')
 
 

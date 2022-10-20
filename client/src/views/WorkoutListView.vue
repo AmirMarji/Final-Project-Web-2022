@@ -49,7 +49,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="button is-light" @click="deleteWorkout(i)">Delete</button>
+                    <button  class="button is-light" @click="deleteWorkout(i)">Delete</button>
                     
                     <!-- EDIT WILL COME LATER -->
                 <!-- <button class="button is-light" @click="$router.push('/editworkout')
@@ -63,6 +63,9 @@
 
 <script setup lang="ts">
 import workouts, { deleteWorkout } from '../stores/workout'
+import session, { login, logout } from '../stores/session' 
+import { useAttrs } from 'vue';
+
 </script>
 
 <style scoped>
