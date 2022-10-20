@@ -30,7 +30,7 @@
                             <div class="media">
                                 <div class="media-left">
                                     <figure class="image is-48x48">
-                                        <img v-bind:src="session.user.image"
+                                        <img src="src/assets/icon.png"
                                             alt="Placeholder image">
                                     </figure>
                                 </div>
