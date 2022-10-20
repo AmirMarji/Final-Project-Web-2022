@@ -11,6 +11,7 @@
                 </p>
                 <p> Please pick a user from the dropdown to sign in.
                 </p>
+                <p>(Jimmy Mcgill has accsess to the admin page)</p>
             </div>
         </section>
 
