@@ -1,17 +1,24 @@
 
-<script  lang="ts">
+<script  setup lang="ts">
 import workouts, { addWorkout } from '../stores/workout'
 import session, { login, logout } from '../stores/session'
+import { ref } from 'vue';
+import router from '../router'
 
-export default {
-  data() {
-    return {
-        Title: '',
-        addWorkout,
-        session
-    }
+let title = ref("")
+let picture = ref("")
+let location = ref("")
+let type = ref("")
+let duration = ref("")
+let date = ref("")
+
+
+function SubmitForm() {
+
+   addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,title.value,picture.value,location.value,type.value,duration.value,date.value)
+
   }
-}
+
 
 </script>
 
@@ -33,7 +40,7 @@ export default {
             <label class="label is-large">Add New Workout</label>
             <label class="label">Title</label>
             <div class="control has-icons-left has-icons-right">
-                <input v-model="Title" class="input is-large" type="email" placeholder="Enter Title" />
+                <input  class="input is-large"  placeholder="Enter Title" v-model="title"/>
                 <span class="icon is-small is-left">
                     <i class="fas fa-envelope fa-xs"></i>
                 </span>
@@ -46,7 +53,7 @@ export default {
         <div class="field">
             <label class="label">Picture</label>
             <div class="control has-icons-left has-icons-right">
-                <input class="input is-large" type="email" placeholder="Enter Picture Link">
+                <input class="input is-large"  placeholder="Enter Picture Link" v-model="picture"/>
                 <span class="icon is-left">
                     <i class="fas fa-envelope fa-sm"></i>
                 </span>
@@ -60,7 +67,7 @@ export default {
             <label class="label">Location</label>
 
             <div class="control has-icons-left has-icons-right">
-                <input class="input is-large" type="email" placeholder="Enter Location">
+                <input class="input is-large"  placeholder="Enter Location" v-model="location"/>
                 <span class="icon is-large is-left">
                     <i class="fas fa-envelope"></i>
                 </span>
@@ -74,7 +81,7 @@ export default {
             <label class="label">Type</label>
 
             <div class="control has-icons-left has-icons-right">
-                <input class="input is-large" type="email" placeholder="Enter Type of Workout">
+                <input class="input is-large"  placeholder="Enter Type of Workout" v-model="type"/>
                 <span class="icon is-medium is-left">
                     <i class="fas fa-envelope fa-lg"></i>
                 </span>
@@ -88,7 +95,7 @@ export default {
             <label class="label">Duration</label>
 
             <div class="control has-icons-left has-icons-right">
-                <input class="input is-large" type="email" placeholder="Enter Duration">
+                <input class="input is-large"  placeholder="Enter Duration" v-model="duration"/>
                 <span class="icon is-large is-left">
                     <i class="fas fa-envelope"></i>
                 </span>
@@ -102,7 +109,7 @@ export default {
             <label class="label">Date</label>
 
             <div class="control has-icons-left has-icons-right">
-                <input class="input is-large" type="email" placeholder="Enter Date">
+                <input class="input is-large"  placeholder="Enter Date" v-model="date"/>
                 <span class="icon is-large is-left">
                     <i class="fas fa-envelope"></i>
                 </span>
@@ -112,7 +119,8 @@ export default {
             </div>
         </div>
         <div class="control">
-            <button @click="addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,'jimmy','jimmy','jimmy','jimmy','jimmy','jimmy')" class="button is-link">Submit</button>
+            <!-- @click="addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,'jimmy','jimmy','jimmy','jimmy','jimmy','jimmy')"  -->
+            <button  @click="SubmitForm()"  class="button is-link">Submit</button>
         </div>
         <div class="control">
             <button @click="$router.push('/home')
