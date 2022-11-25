@@ -1,0 +1,62 @@
+
+{
+    "person":[
+        {
+            "id": 1,
+            "firstName": "jimmy",
+            "lastName": "McGill",
+            "image": "src/assets/BCS_S6_Portrait_Jimmy.webp"
+           
+        },
+        {
+            "id": 2,
+            "firstName": "Kim",
+            "lastName": "Wexler",
+            "image": "src/assets/BCS_S6_Portrait_Kim.webp"
+            
+        },
+        {
+            "id": 3,
+            "firstName": "Howard",
+            "lastName": "Hamlin",
+            "image": "src/assets/BCS_S6_Portrait_Howard.webp"
+           
+        },
+        {
+            "id": 4,
+            "firstName": "Chuck",
+            "lastName": "McGill",
+            "image": "src/assets/BCS_S3_ChuckMcGill.webp"
+            
+        },
+        {
+            "id": 5,
+            "firstName": "Mike",
+            "lastName": "Ehrmantraut",
+            "image": "src/assets/BCS_S6_Portrait_Mike.webp"
+            
+        },
+        {
+            "id": 6,
+            "firstName": "Gus",
+            "lastName": "Fring",
+            "image": "src/assets/BCS_S3_GusFringe.webp"
+            
+        },
+        {
+            "id": 7,
+            "firstName": "Lalo",
+            "lastName": "Salamanca",
+            "image": "src/assets/BCS_S6_Portrait_Lalo.webp"
+           
+        },
+        {
+            "id": 8,
+            "firstName": "Nacho",
+            "lastName": "Varga",
+            "image": "src/assets/BCS_S6_Portrait_Lalo.webp"
+           
+        }
+    ]
+    
+}

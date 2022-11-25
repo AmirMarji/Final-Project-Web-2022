@@ -8,6 +8,7 @@ export class User {
     public firstName: string | undefined;
     public lastName: string | undefined;
     public image: string | undefined;
+    public id: string | undefined;
 }
 
 
@@ -20,12 +21,14 @@ const session = reactive( {
  * @param firstName 
  * @param lastName 
  * @param image
+ * @param id
  */
-export function login(firstName: string, lastName: string, image: string): void {
+export function login(firstName: string, lastName: string, image: string, id: string): void {
     session.user = {
         firstName,
         lastName,
-        image
+        image,
+        id
        
     };
     router.push('/home');
