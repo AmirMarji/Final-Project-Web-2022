@@ -5,20 +5,31 @@ const port = process.env.PORT || 3000;
 
 
 //use this area for controllers variables
+const postsController = require('./controllers/posts');
+const peopleController = require('./controllers/people');
+
+
 
 
 //allow cross origin requests
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+
+})
 
 //serve static files
 app.use(express.static('./client/dist'));
 
 //use json
 app.use(express.json());
+
+//use this area for controllers
+app.use('/api/v1/posts', postsController)
+app.use('/api/v1/people', peopleController)
+
 
 
 //root route
