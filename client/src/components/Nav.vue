@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import type { peopleData, person } from '@/stores/people';
+import { reactive, ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import session, { login, logout } from '../stores/session' 
 import LoginBadge from './LoginBadge.vue';
@@ -8,6 +9,8 @@ import LoginBadge from './LoginBadge.vue';
 let isActive = ref(false);
 // for navbar
 let isOpen = ref(false);
+
+const listOfUsers = reactive([] as person[]);
 
 // closeDropdownMenu = function(){
 // isActive = !isActive
@@ -83,8 +86,20 @@ let isOpen = ref(false);
                 </button>
               </div>
               <div v-if="session.user == null || session.user.firstName == 'Guest' " class="dropdown-menu" id="dropdown-menu3" role="menu" v-show="isActive">
-                <div class="dropdown-content">
-                  <a href="#" class="dropdown-item" @click="login('Jimmy', 'McGill','src/assets/BCS_S6_Portrait_Jimmy.webp')">
+                <div  class="dropdown-content">
+                        
+                    <a  v-for="people in listOfUsers" :key="people.firstName" href="#" class="dropdown-item" @click="login(people.id, people.firstName, people.lastName, people.profilePic)">
+                      <figure class="image is-48x48">
+                        {{session?.user?.firstName}} {{session?.user?.lastName}}
+                    </figure>
+
+                    </a>
+
+                
+                    
+              
+
+                  <!-- <a href="#" class="dropdown-item" @click="login('Jimmy', 'McGill','src/assets/BCS_S6_Portrait_Jimmy.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Jimmy.webp">
                       Jimmy McGill
@@ -131,7 +146,7 @@ let isOpen = ref(false);
                       <img src="../assets/BCS_S6_Portrait_Lalo.webp">
                       Lalo Salamanca
                     </figure>
-                  </a>
+                  </a> -->
                 </div>
               </div>
             </div>

@@ -48,9 +48,9 @@ app.use((err, req, res, next) => {
 
 //star route
 //im not sure if this is necessary or if i should just send them back to main page
-app.get('*', (req, res) => {
-  res.send('404: Page not found');
-})
+// app.get('*', (req, res) => {
+//   res.send('404: Page not found');
+// })
 
 
 // 418 I'm a teapot
