@@ -1,7 +1,8 @@
 require('dotenv').config();
-const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const uri = process.env.MONGO_URI ?? "";
+const { MongoClient, ServerApiVersion } = require('mongodb');
+console.log(process.env.MONGO);
+const uri = process.env.MONGO ?? "";
 
 const options = { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 }
 

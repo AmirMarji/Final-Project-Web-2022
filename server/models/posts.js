@@ -1,5 +1,23 @@
 const posts = require('../data/posts.json');
 const list = [];
+const { connect } = require('./mongo');
+
+
+const COLLECTION_NAME = 'Posts';
+
+async function collection(){
+    const client = await connect();
+    return client.db('App').collection(COLLECTION_NAME);
+}
+
+async function getPosts() {
+    const db  = await collection();
+    const data = await db.find({}).toArray();
+    return data;
+}
+
+
+
 
 
 function getAllPosts() {
@@ -34,6 +52,7 @@ module.exports = {
     getAllPosts,
     getPostByTitle,
     addPost,
-    deletePost
+    deletePost,
+    getPosts
 
 };

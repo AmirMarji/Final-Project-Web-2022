@@ -2,7 +2,8 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-
+// const dotenv = require('dotenv');
+// dotenv.config({ path: '/.env' });
 
 //use this area for controllers variables
 const postsController = require('./controllers/posts');
