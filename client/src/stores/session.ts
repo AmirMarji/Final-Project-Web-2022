@@ -9,7 +9,6 @@ export class User {
     public firstName: string | undefined;
     public lastName: string | undefined;
     public image: string | undefined;
-    public id: string | undefined;
 }
 
 
@@ -26,9 +25,9 @@ const session = reactive({
  * @param lastName 
  * @param image
  */
-export function login(id: string, firstName: string, lastName: string, image: string): void {
+export function login( firstName: string, lastName: string, image: string): void {
     session.user = {
-        id,
+        // id,
         firstName,
         lastName,
         image
