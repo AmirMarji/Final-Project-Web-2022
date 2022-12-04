@@ -1,9 +1,10 @@
 
 <script  setup lang="ts">
-import workouts, { addWorkout } from '../stores/workout'
-import session, { login, logout } from '../stores/session'
+import workouts, { addWorkouts } from '../stores/workout'
+import session, { api, login, logout } from '../stores/session'
 import { ref } from 'vue';
 import router from '../router'
+import myFetch from '@/services/myFetch';
 
 let title = ref("")
 let picture = ref("")
@@ -14,10 +15,31 @@ let date = ref("")
 
 
 function SubmitForm() {
-    console.log(picture.value)
     // user: string,title: string, date: string, duration: string, location: string, picture: string, type: string
-   addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,title.value,date.value,duration.value,location.value,picture.value,type.value)
+//    addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,title.value,date.value,duration.value,location.value,picture.value,type.value)
+   //take all the data and send it to the server
 
+
+    myFetch('posts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+
+        body: JSON.stringify({
+            user: `${session?.user?.firstName} ${session?.user?.lastName}`,
+            title: title.value,
+            date: date.value,
+            duration: duration.value,
+            location: location.value,
+            picture: picture.value,
+            type: type.value
+        })
+    })
+    .then((data) => {
+        console.log(data)
+        router.push('/workouts')
+    })
   }
 
 

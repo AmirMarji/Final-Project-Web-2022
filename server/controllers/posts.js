@@ -9,8 +9,9 @@ app.get('/', (req, res, next) => {
     .get('/:title', (req, res, next) => {
         res.send(posts.getPostByTitle(req.params.title));
     })
-    .post('/:uid', (req, res, next) => {
+    .post('/', (req, res, next) => {
         posts.addPost(req.body);
+        console.log(req.body);
         res.send(posts.getAllPosts());
     })
     .delete('/:title', (req, res, next) => {

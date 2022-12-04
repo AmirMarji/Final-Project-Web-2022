@@ -1,4 +1,6 @@
 const posts = require('../data/posts.json');
+const list = [];
+
 
 function getAllPosts() {
   return posts;
@@ -9,7 +11,16 @@ function getPostByTitle(title) {
 }
 
 function addPost(post) {
-  posts.push(post);
+  let postItem = list.find(item => item.title === post.title);
+  if (!postItem) {
+    list.push(post);
+  }
+  else{
+    postItem = post;
+  }
+
+  return { ...postItem, product: getPostByTitle(post.title) };
+    
 }
 
 function deletePost(title) {
