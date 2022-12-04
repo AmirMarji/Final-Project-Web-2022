@@ -15,32 +15,38 @@ let date = ref("")
 
 
 function SubmitForm() {
+
+
     // user: string,title: string, date: string, duration: string, location: string, picture: string, type: string
 //    addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,title.value,date.value,duration.value,location.value,picture.value,type.value)
    //take all the data and send it to the server
 
+   const data = {
+     user: `${session?.user?.firstName} ${session?.user?.lastName}`,
+     title: title.value,
+     date: date.value,
+     duration: duration.value,
+     location: location.value,
+     picture: picture.value,
+     type: type.value
+    }
 
-    myFetch('posts', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
+    console.log(data);
+    console.log(JSON.stringify(data));
 
-        body: JSON.stringify({
-            user: `${session?.user?.firstName} ${session?.user?.lastName}`,
-            title: title.value,
-            date: date.value,
-            duration: duration.value,
-            location: location.value,
-            picture: picture.value,
-            type: type.value
-        })
+    myFetch('posts', data, 'POST')
+    .then((response) => {
+        console.log(response);
+        router.push('/workout')
     })
-    .then((data) => {
-        console.log(data)
-        router.push('/workouts')
-    })
-  }
+    .catch((error) => {
+        console.log(error);
+    });
+
+
+}   
+
+
 
 
 </script>

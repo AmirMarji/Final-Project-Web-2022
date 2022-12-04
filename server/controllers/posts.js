@@ -4,19 +4,35 @@ const posts = require('../models/posts');
 
 
 app.get('/', (req, res, next) => {
-    res.send(posts.getAllPosts());
+    posts.getAllPosts()
+        .then(posts => {
+            res.send(posts);
+        })
+        .catch(next);
 })
     .get('/:title', (req, res, next) => {
-        res.send(posts.getPostByTitle(req.params.title));
+        posts.getPostByTitle(req.params.title)
+            .then(post => {
+                res.send(post);
+            })
+            .catch(next);
+        
     })
     .post('/', (req, res, next) => {
-        posts.addPost(req.body);
-        console.log(req.body);
-        res.send(posts.getAllPosts());
+        posts.addPost(req.body)
+            .then(post => {
+                console.log(post);
+                res.send(JSON.stringify(post));
+            })
+            .catch(next);
     })
     .delete('/:title', (req, res, next) => {
-        posts.deletePost(req.params.title);
-        res.send(posts.getAllPosts());
+
+        posts.deletePost(req.params.title)
+            .then(post => {
+                res.send(post);
+            })
+            .catch(next);
     });
     
     module.exports = app;

@@ -46,13 +46,9 @@ export function load () {
 }
 
 export function addWorkouts (post: workouData) {
-    myFetch('/api/v1/posts', {
-        method: 'POST',
-        body: JSON.stringify(post)
-    })
+    myFetch('/api/v1/posts', post, 'POST')
     .then((data) => {
         workout.push(data as workouData);
-        router.push('/posts');
     })
 }
 
