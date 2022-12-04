@@ -1,3 +1,18 @@
+
+<script setup lang="ts">
+// import workouts, { deleteWorkout } from '../stores/workout'
+import { reactive } from 'vue';
+import session, { login, logout } from '../stores/session' 
+import { workouData, deleteWorkout, getWorkout} from '../stores/workout';
+
+const workouts = reactive([] as any[]);
+getWorkout().then((data) => {
+    workouts.push(...data);
+    console.log(workouts);
+});
+
+</script>
+
 <template>
     <div>
         <article class="message is-info">
@@ -10,7 +25,7 @@
 
                 <button class="button is-primary" @click="$router.push('/addworkout')
                 ">Add A New WORKOUT</button>
-                <div v-for="(workout, i) in workouts" :key="i">
+                <div v-for=" workout in workouts" :key="workout.title">
 
 
 
@@ -60,12 +75,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import workouts, { deleteWorkout } from '../stores/workout'
-import session, { login, logout } from '../stores/session' 
-import { useAttrs } from 'vue';
 
-</script>
 
 <style scoped>
 
