@@ -22,7 +22,8 @@ app.get('/', (req, res, next) => {
         posts.addPost(req.body)
             .then(post => {
                 console.log(post);
-                res.send(JSON.stringify(post));
+                res.status(200).send({});
+                
             })
             .catch(next);
     })
