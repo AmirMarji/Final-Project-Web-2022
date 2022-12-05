@@ -35,10 +35,13 @@ async function addPost(post) {
     await db.insertOne(post);
 }
 
-async function deletePost(title) {
+
+async function deletePost(id){
     const db  = await collection();
-    await db.deleteOne({title: title}); 
-}
+    const result = await db.deleteOne({ _id: id }); 
+    return result;
+
+}   
 
 // function getAllPosts() {
 //   return posts;

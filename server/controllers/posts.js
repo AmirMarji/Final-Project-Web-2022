@@ -31,7 +31,7 @@ app.get('/', (req, res, next) => {
 
         posts.deletePost(req.params.title)
             .then(post => {
-                res.send(post);
+                res.status(200).send({});
             })
             .catch(next);
     });

@@ -9,6 +9,7 @@ export default function myFetch<T>(url: string, data: any = null, method?: strin
             'Content-Type': 'application/json',
         },
         body: data ? JSON.stringify(data) : undefined,
+        
     };
     //returns promise
     return fetch(API_ROOT + url, options).then( x=>x.json() );

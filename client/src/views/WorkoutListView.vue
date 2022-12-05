@@ -25,20 +25,17 @@ getWorkout().then((data) => {
 
                 <button class="button is-primary" @click="$router.push('/addworkout')
                 ">Add A New WORKOUT</button>
-                <div v-for=" workout in workouts" :key="workout.title">
-
-
-
+                <div v-for=" i in workouts" :key="i.title">
 
                     <div class="card">
                         <div class="card-image">
                             <header class="card-header">
                                 <p class="card-header-title">
-                                    {{ workout.title }}
+                                    {{ i.title }}
                                 </p>
                             </header>
                             <figure class="image is-4by3">
-                                <img v-bind:src="workout.picture" alt="Placeholder image">
+                                <img v-bind:src="i.picture" alt="Placeholder image">
                             </figure>
                         </div>
                         <div class="card-content">
@@ -49,21 +46,21 @@ getWorkout().then((data) => {
                                     </figure>
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4">{{ workout.user }}</p>
-                                    <p class="subtitle is-6">@{{ workout.user }}</p>
+                                    <p class="title is-4">{{ i.user }}</p>
+                                    <p class="subtitle is-6">@{{ i.user }}</p>
                                 </div>
                             </div>
 
                             <div class="content">
-                                {{ workout.type }}
-                                {{ workout.duration }}
-                                {{ workout.location }}
+                                {{ i.type }}
+                                {{ i.duration }}
+                                {{ i.location }}
                                 <br>
-                                <p>{{ workout.date }}</p>
+                                <p>{{ i.date }}</p>
                             </div>
                         </div>
                     </div>
-                    <button  class="button is-light" @click="deleteWorkout(i)">Delete</button>
+                    <button  class="button is-light" @click="deleteWorkout(i._id)">Delete</button>
                     
                     <!-- EDIT WILL COME LATER -->
                 <!-- <button class="button is-light" @click="$router.push('/editworkout')

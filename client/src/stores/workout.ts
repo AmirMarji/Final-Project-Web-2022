@@ -72,9 +72,13 @@ export function addWorkout(user: string,title: string, date: string, duration: s
 
 }
 
+//TODO FIX DELETE
 export function deleteWorkout(index: number) {
-    
-        workout.splice(index, 1); // 2nd parameter means remove one item only
+    console.log(workout);
+    workout.splice(index, 1);
+    console.log(workout);
+    router.push('/workout');
+    return api<workouData>(`posts/${index}`, null, 'DELETE');
 }
 
 export function editWorkout(index: number,user: string,title: string, date: string, duration: string, location: string, picture: string, type: string){
