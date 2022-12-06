@@ -1,4 +1,5 @@
 //express code
+const path = require('path');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -54,9 +55,9 @@ app.use((err, req, res, next) => {
 // })
 
 
-// 418 I'm a teapot
 app.use((req, res, next) => {
-  res.status(418).send("I'm a teapot");
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+  //res.status(418).send("I'm a teapot");
 }) 
 
 
