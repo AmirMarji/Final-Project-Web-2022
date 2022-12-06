@@ -12,14 +12,14 @@
 
         <table class="table is-bordered">
                 <tr>
-                    <th>ID</th>
-                    <th>USER</th>
-                    <th>TITLE</th>
-                    <th>PICTURE LINK</th>
-                    <th>LOCATION</th>
-                    <th>TYPE</th>
-                    <th>DURATION</th>
-                    <th>DATE</th>
+                    <th>id</th>
+                    <th>user</th>
+                    <th>title</th>
+                    <th>picture link</th>
+                    <th>location</th>
+                    <th>type</th>
+                    <th>duration</th>
+                    <th>date</th>
                 </tr>
                 <tr v-for="(workout, i) in statWorkouts" :key="i">
                     <th>{{ workout._id }}}</th>
