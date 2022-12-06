@@ -104,54 +104,54 @@ let isOpen = ref(false);
 
 
                   <a href="#" class="dropdown-item"
-                    @click="login('jimmy', 'McGill', '/assets/BCS_S6_Portrait_Jimmy.webp')">
+                    @click="login('jimmy', 'McGill', '/assets/BCS_S6_Portrait_Jimmy.734fdd13.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Jimmy.webp">
                       Jimmy McGill
                     </figure>
                   </a>
                   <a href="#" class="dropdown-item"
-                    @click="login('Kim', 'Wexler', '/assets/BCS_S6_Portrait_Kim.webp')">
+                    @click="login('Kim', 'Wexler', '/assets/BCS_S6_Portrait_Kim.94ab7700.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Kim.webp">
                       Kim Wexler
                     </figure>
                   </a>
                   <a href="#" class="dropdown-item"
-                    @click="login('Mike', 'Ehrmantraut', '/assets/BCS_S6_Portrait_Mike.webp')">
+                    @click="login('Mike', 'Ehrmantraut', '/assets/BCS_S6_Portrait_Mike.c8d64781.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Mike.webp">
                       Mike Ehrmantraut
                     </figure>
                   </a>
                   <a href="#" class="dropdown-item"
-                    @click="login('Howard', 'Hamlin', '/assets/BCS_S6_Portrait_Howard.webp')">
+                    @click="login('Howard', 'Hamlin', '/assets/BCS_S6_Portrait_Howard.e32b5d99.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Howard.webp">
                       Howard Hamlin
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item" @click="login('Nacho', 'Varga', '/assets/BCS_S3_Nacho.webp')">
+                  <a href="#" class="dropdown-item" @click="login('Nacho', 'Varga', '/assets/BCS_S3_Nacho.da89731f.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S3_Nacho.webp">
                       Nacho Varga
                     </figure>
                   </a>
-                  <a href="#" class="dropdown-item" @click="login('Gus', 'Fring', '/assets/BCS_S3_GusFringe.webp')">
+                  <a href="#" class="dropdown-item" @click="login('Gus', 'Fring', '/assets/BCS_S3_GusFringe.d50e5ac8.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S3_GusFringe.webp">
                       Gus Fring
                     </figure>
                   </a>
                   <a href="#" class="dropdown-item"
-                    @click="login('Chuck', 'McGill', '/assets/BCS_S3_ChuckMcGill.webp')">
+                    @click="login('Chuck', 'McGill', '/assets/BCS_S3_ChuckMcGill.38a8fe55.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S3_ChuckMcGill.webp">
                       Chuck McGill
                     </figure>
                   </a>
                   <a href="#" class="dropdown-item"
-                    @click="login('Lalo', 'Salamanca', '/assets/BCS_S6_Portrait_Lalo.webp')">
+                    @click="login('Lalo', 'Salamanca', '/assets/BCS_S6_Portrait_Lalo.5445c77f.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Lalo.webp">
                       Lalo Salamanca
