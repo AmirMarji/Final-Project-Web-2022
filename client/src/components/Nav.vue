@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { peopleData, person } from '@/stores/people';
+import { getPeople, type peopleData, type person } from '@/stores/people';
 import { reactive, ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import session, { login, logout } from '../stores/session'
@@ -10,7 +10,7 @@ let isActive = ref(false);
 // for navbar
 let isOpen = ref(false);
 
-const listOfUsers = reactive([] as person[]);
+
 
 // closeDropdownMenu = function(){
 // isActive = !isActive
@@ -104,7 +104,7 @@ const listOfUsers = reactive([] as person[]);
 
 
                   <a href="#" class="dropdown-item"
-                    @click="login('Jimmy', 'McGill', 'src/assets/BCS_S6_Portrait_Jimmy.webp')">
+                    @click="login('jimmy', 'McGill', 'src/assets/BCS_S6_Portrait_Jimmy.webp')">
                     <figure class="image is-48x48">
                       <img src="../assets/BCS_S6_Portrait_Jimmy.webp">
                       Jimmy McGill

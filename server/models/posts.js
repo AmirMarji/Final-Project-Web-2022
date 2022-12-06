@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb');
 const posts = require('../data/posts.json');
 const list = [];
 const { connect } = require('./mongo');
@@ -38,7 +39,7 @@ async function addPost(post) {
 
 async function deletePost(id){
     const db  = await collection();
-    const result = await db.deleteOne({ _id: id }); 
+    const result = await db.deleteOne({ _id: new ObjectId(id )}); 
     return result;
 
 }   

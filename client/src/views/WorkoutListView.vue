@@ -1,6 +1,7 @@
 
 <script setup lang="ts">
 // import workouts, { deleteWorkout } from '../stores/workout'
+import router from '@/router';
 import { reactive } from 'vue';
 import session, { login, logout } from '../stores/session' 
 import { workouData, deleteWorkout, getWorkout} from '../stores/workout';
@@ -10,6 +11,14 @@ getWorkout().then((data) => {
     workouts.push(...data);
     console.log(workouts);
 });
+
+async function deleteWorkoutByClient(id:string, index: number) {
+    await deleteWorkout(id);
+    console.log(workouts); 
+    workouts.splice(index, 1);
+    console.log(workouts);
+    router.push('/workout');
+}
 
 </script>
 
@@ -25,7 +34,7 @@ getWorkout().then((data) => {
 
                 <button class="button is-primary" @click="$router.push('/addworkout')
                 ">Add A New WORKOUT</button>
-                <div v-for=" i in workouts" :key="i.title">
+                <div v-for=" i, index in workouts" :key="i.title">
 
                     <div class="card">
                         <div class="card-image">
@@ -60,7 +69,7 @@ getWorkout().then((data) => {
                             </div>
                         </div>
                     </div>
-                    <button  class="button is-light" @click="deleteWorkout(i._id)">Delete</button>
+                    <button  class="button is-light" @click="deleteWorkoutByClient(i._id, index)">Delete</button>
                     
                     <!-- EDIT WILL COME LATER -->
                 <!-- <button class="button is-light" @click="$router.push('/editworkout')

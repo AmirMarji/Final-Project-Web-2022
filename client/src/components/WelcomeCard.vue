@@ -1,6 +1,9 @@
 
 <script setup lang="ts">
+import { getPeople } from '@/stores/people';
 import session, { login, logout } from '../stores/session' ;
+
+
 
 </script>
 <template>

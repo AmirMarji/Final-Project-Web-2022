@@ -10,7 +10,8 @@
             </div>
         </article>
 
-        <div v-for="(workout, i) in workouts" :key="i">
+        <div v-for="(workout, i) in statWorkouts" :key="i">
+                    {{ workout._id }}}
                     {{ workout.user }}
                     {{ workout.title }}
                     {{ workout.picture }}
@@ -23,7 +24,14 @@
 </template>
 
 <script setup lang="ts">
-import workouts, { deleteWorkout } from '../stores/workout'
+import { reactive } from 'vue';
+import workouts, { deleteWorkout, getWorkout } from '../stores/workout'
+
+const statWorkouts = reactive([] as any[]);
+getWorkout().then((data) => {
+    statWorkouts.push(...data);
+    console.log(statWorkouts);  
+});
 
 </script>
 

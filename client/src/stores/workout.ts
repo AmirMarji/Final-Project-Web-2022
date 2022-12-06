@@ -52,16 +52,13 @@ export function addWorkouts (post: workouData) {
     })
 }
 
-//TODO LATER
-// export function deleteWorkouts (index: number) {
-//     myFetch('/api/v1/people/' + id, {
-//         method: 'DELETE'
-//     })
-//     .then(() => {
-//         load();
-//     })
-// }
 
+export function deleteWorkout(id: string){
+
+    return api<workouData>(`posts/${id}`, {}, 'DELETE');
+
+}
+//old add workout
 export function addWorkout(user: string,title: string, date: string, duration: string, location: string, picture: string, type: string): void {
     // workout.workouData = {
     //     Title,date,duration,location,picture,type
@@ -72,15 +69,8 @@ export function addWorkout(user: string,title: string, date: string, duration: s
 
 }
 
-//TODO FIX DELETE
-export function deleteWorkout(index: number) {
-    console.log(workout);
-    workout.splice(index, 1);
-    console.log(workout);
-    router.push('/workout');
-    return api<workouData>(`posts/${index}`, null, 'DELETE');
-}
 
+// not used
 export function editWorkout(index: number,user: string,title: string, date: string, duration: string, location: string, picture: string, type: string){
     //very rough draft just deletes and replaces new post simultainiusly
     workout.splice(index, 1);
