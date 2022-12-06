@@ -32,11 +32,13 @@ async function deleteWorkoutByClient(id:string, index: number) {
 
                 <h1>THIS IS A PAGE TO VIEW CURRENT WORKOUTS</h1>
 
-                <button class="button is-primary" @click="$router.push('/addworkout')
+                <button class="button is-primary is-rounded" @click="$router.push('/addworkout')
                 ">Add A New WORKOUT</button>
                 <div v-for=" i, index in workouts" :key="i.title">
 
-                    <div class="card">
+                    <div  class="box">
+                        <button class="delete is-large" @click="deleteWorkoutByClient(i._id, index)"></button>
+
                         <div class="card-image">
                             <header class="card-header">
                                 <p class="card-header-title">
@@ -69,11 +71,6 @@ async function deleteWorkoutByClient(id:string, index: number) {
                             </div>
                         </div>
                     </div>
-                    <button  class="button is-light" @click="deleteWorkoutByClient(i._id, index)">Delete</button>
-                    
-                    <!-- EDIT WILL COME LATER -->
-                <!-- <button class="button is-light" @click="$router.push('/editworkout')
-                ">Edit</button> -->
                 </div>
 
             </div>

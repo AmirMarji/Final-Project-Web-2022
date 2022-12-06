@@ -149,7 +149,7 @@ function SubmitForm() {
         </div>
         <div class="control">
             <!-- @click="addWorkout(`${session?.user?.firstName} ${session?.user?.lastName}`,'jimmy','jimmy','jimmy','jimmy','jimmy','jimmy')"  -->
-            <button  @click="SubmitForm()"  class="button is-link">Submit</button>
+            <button  @click="SubmitForm()"  class="button is-link is-rounded">Submit</button>
         </div>
         <div class="control">
             <button @click="$router.push('/home')

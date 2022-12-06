@@ -35,7 +35,7 @@ let isOpen = ref(false);
 
     <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': isOpen }">
       <div class="navbar-start">
-        <router-link to="/home" class="navbar-item">
+        <router-link to="/home" class="navbar-item" >
           Home
         </router-link>
 
