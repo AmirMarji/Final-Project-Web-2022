@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000;
 //use this area for controllers variables
 const postsController = require('./controllers/posts');
 const peopleController = require('./controllers/people');
+const chatGPTFetch = require('./controllers/chatGPTFetch');
 
 
 
@@ -31,6 +32,7 @@ app.use(express.json());
 //use this area for controllers
 app.use('/api/v1/posts', postsController)
 app.use('/api/v1/people', peopleController)
+app.use('/api/v1/chatGPTFetch', chatGPTFetch)
 
 
 
